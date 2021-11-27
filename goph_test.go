@@ -6,7 +6,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/melbahja/goph"
+	"github.com/robotics-kid/gophmy"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/terminal"
 )
