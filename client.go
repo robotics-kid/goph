@@ -35,7 +35,7 @@ type Config struct {
 var DefaultTimeout = 20 * time.Second
 
 // New starts a new ssh connection, the host public key must be in known hosts.
-func New(user string, addr string, auth Auth) (c *Client, err error) {
+func New(user string, addr string, auth Auth, port uint) (c *Client, err error) {
 
 	callback, err := DefaultKnownHosts()
 
@@ -46,7 +46,7 @@ func New(user string, addr string, auth Auth) (c *Client, err error) {
 	c, err = NewConn(&Config{
 		User:     user,
 		Addr:     addr,
-		Port:     22,
+		Port:     port,
 		Auth:     auth,
 		Timeout:  DefaultTimeout,
 		Callback: callback,
