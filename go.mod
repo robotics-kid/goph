@@ -1,4 +1,4 @@
-module github.com/melbahja/gophmy
+module github.com/robotics-kid/gophmy
 
 go 1.13
 
